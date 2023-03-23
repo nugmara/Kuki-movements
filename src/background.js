@@ -2,10 +2,11 @@ export default class Background {
     constructor(gameWidth, gameHeight) {
         this.gameWidth = gameWidth
         this.gameHeight = gameHeight
-        this.image = new Image()
-        this.image.src = "../images/layer1.png"
+        this.image1 = new Image()
+        this.image1.src = "../images/layer1.png"
         this.image2 = new Image()
         this.image2.src = "../images/layer2.png"
+        this.images = [this.image1, this.image2]
         this.x = 0;
         this.y = 0;
         this.width = 1768;
@@ -16,10 +17,14 @@ export default class Background {
         this.x = this.x - this.gameSpeed
     }
     draw(ctx) {
-        ctx.drawImage(this.image, this.x, this.y, this.width, this.height)
-        ctx.drawImage(this.image, this.x + this.width, this.y, this.width, this.height)
+        ctx.drawImage(this.image1, this.x, this.y, this.width, this.height)
         ctx.drawImage(this.image2, this.x, this.y, this.width, this.height)
+
+        ctx.drawImage(this.image1, this.x + this.width, this.y, this.width, this.height)
         ctx.drawImage(this.image2, this.x + this.width, this.y, this.width, this.height)
+
+        // restarting the position
+        if(this.x <= -this.width) this.x += this.width
 
     }
 }

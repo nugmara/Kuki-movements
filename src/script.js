@@ -9,6 +9,7 @@ window.addEventListener("load", function(){
     const ctx = canvas.getContext("2d")
     canvas.width = 600
     canvas.height = 500
+    this.speed = 3
 
     const player = new Player(canvas.width, canvas.height)
     const input = new InputHandler()
@@ -22,7 +23,7 @@ window.addEventListener("load", function(){
         ctx.clearRect(0, 0, canvas.width, canvas.height)
         player.update(input.lastKey)
         background.draw(ctx)
-        // background.update()
+        background.update()
         player.draw(ctx, deltaTime)
         requestAnimationFrame(animate)
         
