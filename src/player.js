@@ -1,13 +1,9 @@
 import {
-  StandingLeft,
-  StandingRight,
-  SittingLeft,
+//   StandingRight,
   SittingRight,
   RunningLeft,
   RunningRight,
-  JumpingLeft,
   JumpingRight,
-  FallingLeft,
   FallingRight,
 } from "./state.js";
 
@@ -16,15 +12,11 @@ export default class Player {
     this.gameWidth = gameWidth;
     this.gameHeight = gameHeight;
     this.states = [
-      new StandingLeft(this),
-      new StandingRight(this),
-      new SittingLeft(this),
-      new SittingRight(this),
-      new RunningLeft(this),
+    //   new StandingRight(this),
+    new SittingRight(this),
+    new RunningLeft(this),
       new RunningRight(this),
-      new JumpingLeft(this),
       new JumpingRight(this),
-      new FallingLeft(this),
       new FallingRight(this),
     ];
     this.currentState = this.states[1];
