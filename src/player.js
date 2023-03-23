@@ -31,12 +31,12 @@ export default class Player {
     this.image = document.getElementById("shadowDog");
     this.width = 200;
     this.height = 181.83;
-    this.x = this.gameWidth / 2 - this.width / 2;
-    this.y = this.gameHeight - this.height;
-    this.vy = 0;
+    this.x = 0
+    this.y = 0
+    this.vy = 0
     this.weight = 0.5;
     this.frameX = 0;
-    this.frameY = 0;
+    this.frameY = 6;
     this.maxFrame = 6;
     this.speed = 0;
     this.maxSpeed = 10;
