@@ -24,7 +24,7 @@ export default class Player {
     this.width = 200;
     this.height = 181.83;
     this.x = 0
-    this.y = 0
+    this.y = 10
     this.vy = 0
     this.weight = 0.5;
     this.frameX = 0;
