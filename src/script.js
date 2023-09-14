@@ -8,7 +8,7 @@ window.addEventListener("load", function(){
     loading.style.display = "none";
     const canvas = document.getElementById("canvas1")
     const ctx = canvas.getContext("2d")
-    canvas.width = 600
+    canvas.width = 1000
     canvas.height = 500
     this.speed = 3
 
@@ -28,7 +28,7 @@ window.addEventListener("load", function(){
         background.draw(ctx)
         background.update()
         player.draw(ctx, deltaTime)
-        enemies.draw(ctx)
+        // enemies.draw(ctx)
         requestAnimationFrame(animate)
         
     }
