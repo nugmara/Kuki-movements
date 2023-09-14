@@ -78,6 +78,6 @@ export default class Player {
     this.currentState.enter();
   }
   onGround() {
-    return this.y >= this.gameHeight - this.height - 179.9;
+    return this.y >= this.gameHeight - this.height * 2;
   }
 }
